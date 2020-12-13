@@ -1,0 +1,68 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+section {
+    padding: 3em 1em;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: var(--container-width-lg);
+    }
+}
+
+@media (min-width: 1680px) {
+    .container {
+        max-width: var(--container-width-xlg);
+    }
+}
+
+.column {
+    --columns: 12; /* number of columns in the grid system */
+    --width-default: 12; /* default width, makes it flexible */
+    --width: var(--width-mobile, var(--width-default)); /* width of the element */
+
+    flex-basis: calc(var(--width) / var(--columns) * 100%);
+}
+
+@media (min-width: 576px) {
+    .column {
+        --width: var(--width-tablet, var(--width-mobile, var(--width-default)));
+    }
+}
+
+@media (min-width: 768px) {
+    .column {
+        --width: var(--width-desktop, var(--width-tablet, var(--width-mobile, var(--width-default))));
+    }
+}
+
+/* sections */
+
+header {
+    --width: 12;
+    height: 8rem;
+}
+
+.content {
+    --width: 8;
+    height: 64rem;
+}
+
+.sidebar {
+    --width: 4;
+}

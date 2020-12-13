@@ -1,0 +1,39 @@
+:root {
+    --primary: #B81840;
+    --text: #291414;
+    --accent-pictorial-carmine: 202, 28, 83;
+    --accent-orange-red: 243, 114, 44;
+    --accent-yellow-orange-color-wheel: 248, 150, 30;
+    --accent-maize-crayola: 249, 199, 79;
+    --accent-pistachio: 144, 190, 109;
+    --accent-zomp: 67, 170, 139;
+    --accent-cadet-blue: 77, 144, 142;
+    --accent-cg-blue: 39, 125, 161;
+    --background-dark: #29050E;
+    --background-light: #fff;
+
+    --nav-hover-bg: rgba(41, 5, 14, 0.08);
+    --container-width: 960px;
+    --container-width-lg: 1024px;
+    --container-width-xlg: 1440px;
+
+    /*feature assigned colors*/
+    --op-1: .15;
+    --f-1: rgb(var(--accent-pictorial-carmine));
+    --f-1-1: rgba(var(--accent-pictorial-carmine),var(--op-1));
+    --f-2: rgb(var(--accent-orange-red));
+    --f-2-1: rgba(var(--accent-orange-red),var(--op-1));
+    --f-3: rgb(var(--accent-yellow-orange-color-wheel));
+    --f-3-1: rgba(var(--accent-yellow-orange-color-wheel),var(--op-1));
+    --f-4: rgb(var(--accent-maize-crayola));
+    --f-4-1: rgba(var(--accent-maize-crayola),var(--op-1));
+    --f-5: rgb(var(--accent-pistachio));
+    --f-5-1: rgba(var(--accent-pistachio),var(--op-1));
+    --f-6: rgb(var(--accent-zomp));
+    --f-6-1: rgba(var(--accent-zomp),var(--op-1));
+    --f-7: rgb(var(--accent-cadet-blue));
+    --f-7-1: rgba(var(--accent-cadet-blue),var(--op-1));
+    --f-8: rgb(var(--accent-cg-blue));
+    --f-8-1: rgba(var(--accent-cg-blue),var(--op-1));
+
+}

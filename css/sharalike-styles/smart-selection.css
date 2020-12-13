@@ -1,0 +1,191 @@
+.section-photo-grid {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.section-photo-grid img {
+    display: block;
+    width: calc(25% - .3em);
+    object-fit: cover;
+    margin-bottom: .3em;
+    margin-right: .3em;
+    transition: all 1s ease-in-out;
+    border-radius: .2em;;
+}
+
+.section-photo-grid h5 {display: none;}
+.section-photo-grid h5 small {font-weight: normal; display: inline-block; margin-left: .5em;}
+.section-photo-grid.enabled h5 {
+    display: block;
+    flex-basis: 100%;
+    margin: .5em 0;
+}
+
+.section-photo-grid.enabled .best-photo {
+    border: 4px solid var(--f-color);
+}
+
+.section-photo-grid.enabled img:nth-child(1) {
+    order: 2;
+}
+.section-photo-grid.enabled img:nth-child(2) {
+    order: 3;
+}
+.section-photo-grid.enabled img:nth-child(3) {
+    order: 4;
+}
+.section-photo-grid.enabled img:nth-child(4) {
+    order: 5;
+}
+.section-photo-grid.enabled img:nth-child(5) {
+    order: 7;
+}
+.section-photo-grid.enabled img:nth-child(6) {
+    order: 8;
+}
+.section-photo-grid.enabled img:nth-child(7) {
+    order: 9;
+}
+.section-photo-grid.enabled img:nth-child(8) {
+    order: 11;
+}
+.section-photo-grid.enabled img:nth-child(9) {
+    order: 12;
+}
+.section-photo-grid.enabled img:nth-child(10) {
+    order: 13;
+}
+.section-photo-grid.enabled img:nth-child(11) {
+    order: 14;
+}
+.section-photo-grid.enabled img:nth-child(12) {
+    order: 16;
+}
+.section-photo-grid.enabled img:nth-child(13) {
+    order: 17;
+}
+.section-photo-grid.enabled img:nth-child(14) {
+    order: 18;
+}
+.section-photo-grid.enabled img:nth-child(15) {
+    order: 19;
+}
+.section-photo-grid.enabled h5:nth-child(16) {
+    order: 1;
+}
+.section-photo-grid.enabled h5:nth-child(17) {
+    order: 6;
+}
+.section-photo-grid.enabled h5:nth-child(18) {
+    order: 10;
+}
+.section-photo-grid.enabled h5:nth-child(19) {
+    order: 15;
+}
+
+@media (min-width: 768px) {
+    .container.even {
+        flex-flow: row-reverse;
+    }
+
+    .feature-demo {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        left: -1em;
+        top: 1.5em;
+    }
+}
+
+
+/* toggle */
+/* The toggle - the box around the slider */
+
+.toggle {
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 62px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70px, -31px);
+    z-index: 100;
+    box-shadow: 0px 30px 50px -9px rgba(49, 40, 42, 0.9);
+    border-radius: 34px;
+  }
+
+  @media (min-width: 768px){
+  .toggle {
+    transform: translate(-70px, 25px);
+  }
+}
+  
+  /* Hide default HTML checkbox */
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    display: inline-block;
+    content: "TRY ME!";
+    color: var(--f-color);
+    line-height: 62px;
+    padding-left: 70px;
+    font-weight: bold;
+  }
+  
+  .slider:after {
+    position: absolute;
+    content: "";
+    height: 54px;
+    width: 54px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--f-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--f-color);
+  }
+
+  input:checked + .slider:after {
+    background-color: white;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--f-color);
+  }
+  
+  input:checked + .slider:after {
+    -webkit-transform: translateX(99px);
+    -ms-transform: translateX(99px);
+    transform: translateX(99px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:after {
+    border-radius: 50%;
+  }
