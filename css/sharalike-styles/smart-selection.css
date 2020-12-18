@@ -22,8 +22,13 @@
     margin: .5em 0;
 }
 
+.section-photo-grid.enabled img {
+    opacity: .5;
+}
+
 .section-photo-grid.enabled .best-photo {
     border: 4px solid var(--f-color);
+    opacity: 1;
 }
 
 .section-photo-grid.enabled img:nth-child(1) {
